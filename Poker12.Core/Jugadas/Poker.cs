@@ -1,9 +1,6 @@
 namespace Poker12.Core.Jugadas;
-public class Poker : JugadaAbs
+public class Poker(JugadaAbs? siguiente = null) : JugadaAbs("Poker", 3, siguiente)
 {
-    public Poker(string nombre, byte prioridad) : base("Poker", 3)
-    {
-    }
     protected override Resultado Aplicar(CartasJugada cartas)
     {
         var valorCon4 = cartas.MayorValorConNCartas(4);

@@ -1,10 +1,6 @@
-using System.Collections.Immutable;
-using System.Runtime.InteropServices;
-using Poker12.Core.Jugadas;
-namespace Poker12.Core.Jugadas; 
-public class EscaleraReal: JugadaAbs
+namespace Poker12.Core.Jugadas;
+public class EscaleraReal(JugadaAbs? siguiente = null) : JugadaAbs("Escalera Real", 1, siguiente)
 {
-    public EscaleraReal(): base("Escalera Real", 1) {}
     protected override Resultado Aplicar(CartasJugada cartas)
     {
         bool escaleraReal = cartas.MismoPalo && cartas.SonConsecutivas &&

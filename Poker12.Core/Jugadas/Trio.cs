@@ -1,7 +1,7 @@
 namespace Poker12.Core.Jugadas;
 public class Trio : JugadaAbs
 {
-    public Trio() : base ("Trio", 7) {}
+    public Trio(JugadaAbs? siguiente = null) : base ("Trio", 7, siguiente) {}
     
     protected override Resultado Aplicar(CartasJugada cartas)
     {

@@ -1,9 +1,8 @@
 using Poker12.Core.Jugadas;
 namespace Poker12.Core.Jugadas
 {
-    public class DoblePar : JugadaAbs
+    public class DoblePar(JugadaAbs? siguiente = null) : JugadaAbs("Doble Par", 8, siguiente)
     {
-        public DoblePar() : base("Doble Par", 8) { }
         protected override Resultado Aplicar(CartasJugada cartas)
         {
             var gruposCon2 = cartas.AgrupadasPorValor

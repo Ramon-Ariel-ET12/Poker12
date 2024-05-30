@@ -1,11 +1,7 @@
 namespace Poker12.Core.Jugadas;
 
-public class FullHouse : JugadaAbs
+public class FullHouse(JugadaAbs? siguiente = null) : JugadaAbs("FullHouse",3, siguiente)
 {
-    public FullHouse(string nombre, Byte prioridad) : base("FullHouse",3)
-    {
-    }
-
     protected override Resultado Aplicar(CartasJugada cartas)
     {
         var valorCon3 = cartas.MayorValorConNCartas(3);
