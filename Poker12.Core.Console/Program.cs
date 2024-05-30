@@ -1,6 +1,4 @@
-﻿using System;
-using System.Security.Cryptography;
-using BenchmarkDotNet.Attributes;
+﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
 using Poker12.Core;
 using Poker12.Core.Jugadas;
